@@ -15,9 +15,10 @@ def add_to_42_path(number: int):
 
 
 class BodyModel(BaseModel):
-    number: int
+    number1: int
+    number2: int
 
 
 @api.post("/add-to-42")
 def add_to_42_body(body: BodyModel):
-    return 42 + body.number
+    return 42 + body.number1 + body.number2
