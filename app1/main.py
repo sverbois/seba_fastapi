@@ -25,7 +25,6 @@ def hello(name: str = Query(...)):
 @api.get("/hello-optional")
 def hello_optional(name: str = Query(None)):
     # def hello(name: Optional(str) = None):
-    # def hello(name):
     if name is None:
         name = "stranger"
     message = f"Hello {name} !!!"
