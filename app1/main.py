@@ -47,3 +47,13 @@ def get_user_agent(user_agent: str = Header(...)):
 def create_item(item: dict = Body(...)):
     # def create_item(item: dict):
     return {"item": item}
+
+
+@api.post("/all/{item_id}")
+def return_all_parameters(
+    item_id: str = Path(...),
+    name: str = Query(...),
+    user_agent: str = Header(...),
+    item: dict = Body(...),
+):
+    return {"name": name, "item_id": item_id, "user_agent": user_agent, "item": item}
