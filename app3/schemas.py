@@ -2,6 +2,7 @@ import datetime
 from typing import Optional
 
 from pydantic import BaseModel
+from pydantic import EmailStr
 
 
 class User(BaseModel):
@@ -10,6 +11,8 @@ class User(BaseModel):
     lastname: str
     birthday: datetime.date
     children: int
+    phone: Optional[str] = None
+    email: Optional[EmailStr] = None
 
 
 class UserUpdate(BaseModel):
@@ -17,3 +20,5 @@ class UserUpdate(BaseModel):
     lastname: Optional[str] = None
     birthday: Optional[datetime.date] = None
     children: Optional[int] = None
+    phone: Optional[str] = None
+    email: Optional[EmailStr] = None
