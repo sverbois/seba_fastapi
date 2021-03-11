@@ -31,7 +31,7 @@ def read_user(user_id: str):
     if user_id not in USERS:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"L'utilisateur *{user_id}* n'est pas présent dans la base de données.",
+            detail=f"L'utilisateur '{user_id}' n'est pas présent dans la base de données.",
         )
     return USERS[user_id]
 
