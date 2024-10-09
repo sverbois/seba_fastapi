@@ -1,7 +1,3 @@
-email-validator == 1.1.2
-fastapi == 0.63.0
-uvicorn == 0.13.4
-
-# development
-black
-pylint
+email-validator
+fastapi 
+uvicorn 
