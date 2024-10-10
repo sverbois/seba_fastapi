@@ -6,20 +6,44 @@ Quelques petites applications pour accompagner une introduction au framework *Fa
 
     git clone https://github.com/sverbois/seba_fastapi.git
     cd seba_fastapi
-    python3.8 -m venv venv
-    ./venv/bin/pip install --upgrade pip
-    ./venv/bin/pip install -r requirements.txt
+    make install
 
 ## Applications
 
 ### Use query, path, headers and body parameters
 
-    ./venv/bin/uvicorn app1.main:api --reload
+    make start1
 
 ### *Add to 42* application
 
-    ./venv/bin/uvicorn app2.main:api --reload
+    make start2
 
-### A simple CRUD application
+### A CRUD application
 
-    ./venv/bin/uvicorn app3.main:api --reload
+    make start3
+
+### An application with a frontend form
+
+    make start4
+
+### TODO Déployer
+
+- https://fastapi.tiangolo.com/deployment/cloud/
+
+### TODO HTML response
+
+### TODO PDF response
+
+### TODO utiliser des variables d'environnement
+
+- https://en.wikipedia.org/wiki/Environment_variable
+- https://fastapi.tiangolo.com/advanced/settings/
+
+### TODO valider un numéro de téléphone
+
+- voir https://pypi.org/project/phonenumbers/
+
+### TODO utiliser une authentification
+
+- voir https://fastapi-login.readthedocs.io/
+

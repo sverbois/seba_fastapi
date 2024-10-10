@@ -18,6 +18,10 @@ start2:
 start3:
 	venv/bin/uvicorn app3.main:api --reload
 
+.PHONY: start  # Start app 4
+start4:
+	venv/bin/uvicorn app4.backend.main:api --reload
+
 .PHONY: clean  # Clean developement environment
 clean:
 	rm -rf venv
